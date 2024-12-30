@@ -8,7 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Realtime Voice Agent",
   description: "A realtime voice agent powered by ElevenLabs",
-  manifest: '/manifest.json',
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
