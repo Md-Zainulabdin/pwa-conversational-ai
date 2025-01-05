@@ -10,7 +10,7 @@ import { Mic, MicOff } from 'lucide-react';
 
 export function VoiceChat({ onStart, isListening }: VoiceChatProps) {
   const conversation = useConversation();
-  const { status, isSpeaking } = conversation;
+  const { isSpeaking } = conversation;
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleStartConversation = useCallback(async () => {
@@ -28,7 +28,7 @@ export function VoiceChat({ onStart, isListening }: VoiceChatProps) {
   }, [onStart, conversation]);
 
   return (
-    <Card className="w-full max-w-md bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700">
+    <Card className="w-full max-w-md">
       <CardContent className="p-6 space-y-6">
         <AIAvatar isSpeaking={isSpeaking} />
 
